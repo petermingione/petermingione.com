@@ -1,0 +1,146 @@
+html, body { 
+	margin:0; 
+	padding:0; 
+	font-size:100%;
+	/*font-size: medium;*/
+}
+		
+body { 
+   background-image: url("../images/background.jpg");
+   background-size: cover;               
+   background-color: #778899;
+   font-family: Verdana, Geneva, Arial, sans-serif;	
+   font-weight: normal;  
+}
+
+a:link {	
+	color:				#fff;
+	text-decoration: none;
+}
+
+a:visited {
+	color:				#000;
+}
+
+a:hover {
+	color:				#ffffff;
+	background-color: 	#000000;
+	padding:          	3px;
+	border-radius:   	4px;    
+}
+
+a:active {
+	color:				#fff;
+	background-color:	#000;
+	position: relative;
+    left: 15px;
+}
+
+#contactSocialMedia a:link {	
+	background-color: 	transparent;
+	text-decoration: none;
+}
+
+#contactSocialMedia a:visited {
+	background-color: 	transparent;
+	text-decoration: none;
+}
+
+#contactSocialMedia a:hover {
+	background-color: 	transparent;
+	text-decoration: none;
+	position: relative;
+	left: 0px;
+}
+
+#contactSocialMedia a:active {
+	background-color: 	transparent;
+	position: relative;
+	left: 10px;
+	text-decoration: none;
+}
+
+#contactHeader {
+	width: 220px; 
+	font-size: 1.25em;	
+	margin: 38px auto 60px auto;
+}
+
+#contactHeader a{
+	text-decoration: none;
+}
+
+#contact-wrapper{
+	width:	407px; 
+	height:	328px; 
+	margin: 0 auto;
+}
+
+#contact-wrapper #contactMain{
+	width:				250px; 
+	height:				160px; 
+	border-radius:		10px;  
+	background-color: rgba(0,0,0,.25);
+	font-family:      	Georgia, "Times New Roman", Times, serif;
+	text-align: 		center;
+	color: white;
+	
+	border-style:solid;
+	border-width: 1px;
+	border-color: black;
+
+	position:relative;
+	top: 75px;
+	left: 32px;
+}
+
+#contact-wrapper #small-tv{
+	width:	407px; 
+	height:	328px; 
+
+	position: relative;
+    left: 1px;
+    top: -172px;
+}
+
+section#contactGoogle {
+	width: 250px;
+	position: relative;
+    left: 10px;
+    margin: 33px auto 0px auto;
+	
+}
+
+section#contactFacebook {
+	width:	233px;
+	height: 20px;
+	 
+	position: relative;
+    left: 0px;
+    
+	margin: 60px auto 0px auto;
+	
+	 border-style: solid;
+	 border-width: 1px;
+}
+
+section#contactSocialMedia {
+
+	width:	190px;	
+    margin: 70px auto 0px auto;
+}
+
+section#contactFooter{
+	width:	190px; /* Why does this need to be here?*/
+	margin: 40px auto 0px auto;			
+}
+
+p#contactinfo{
+	display: 			inline-block; /*Why does this vert. center the text?*/
+	/*vertical-align: 	middle;*/  
+}
+
+span.linkedinRelativePosition{
+	position: relative;
+    top: 5px;
+}

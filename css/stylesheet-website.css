@@ -1,0 +1,359 @@
+html, body { 
+	margin:0; 
+	padding:0; 
+	font-size:100%;
+}
+		
+body { 
+	background-image: url("../images/background.jpg");       
+   	background-color: #778899;
+   	font-family: Verdana, Geneva, Arial, sans-serif;	
+   	font-weight: normal;   	
+}
+
+p { margin:0; padding:0; font-size: 1em; }
+ 
+h1 {	font-size: 2.45em; margin: 0px; padding: 0px; }
+
+h1.inline { display: inline; }
+
+h2 {font-size: 2.55em; }
+
+h3 { font-size: 1.17em; }
+
+h4 { font-size: 1em; }
+
+h5 { font-size: .83em; }
+
+h6 { font-size: .75em; }
+
+ul {
+	list-style-type:none;
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	margin: 0px;
+	padding: 0px;
+}
+
+#content {
+	margin: 0px auto;    /*center the content all browsers except IE*/
+	text-align: center;  /*center the content IE*/
+	width: 1212px;
+	height:1100px;
+}
+
+#content #header ul {
+	margin: 10px 0px 10px 0px;
+	padding: 0px;
+	font-size: 1.25em;
+}
+
+#content #header li {
+	margin: 0px;
+	margin-bottom: 0px;
+	padding: 0px 10px 0px 10px;
+	display: inline;
+	list-style-type: none;	
+}
+
+#content #header a { text-decoration: none; }
+
+#content #header a:link { 
+	color: black;
+	padding: 3px;
+	margin: 0px;   
+}
+
+#content #header a:visited {	
+	color: black;
+	padding: 3px;
+	margin: 0px; 
+}
+
+#content #header a:hover {
+	color: #ffffff;
+	background-color: black;
+	padding: 	3px;
+	border-radius:  4px;
+	margin: 0px;   
+}
+
+#content #header a:active {
+	position: relative;
+    	left: 15px;
+   	color: white;
+}
+
+#content #box { 
+	width: 1212px; 
+	border-radius: 20px;
+}
+
+#content #box #image-one {
+	height: 256px; 
+	width: 256px; 
+	background-image: url("../images/me-one.png");
+	float:left;
+	border-top-left-radius: 20px;
+}
+#content #box #welcome {
+	background-color: rgba(119,136,153,.5);
+	width: 670px; 
+	height: 241px; 
+	padding: 0px 15px 0px 15px;	
+	padding-top: 15px;
+	float:left;
+}
+
+#content #box #welcome h1{
+	font-size: 3.65em;
+	text-shadow:4px 4px 4px white;
+}
+
+#content #box #image-two {
+	height: 256px; 
+	width: 256px; 
+	float:left; 
+	background-image: url("../images/me-two.png");
+	border-top-right-radius: 20px;
+}
+
+#content #inside-box {
+	width: 1212px; 
+	height: 759px; 
+	background-color: rgba(0,0,0,.35);	
+	margin-bottom: 50px;
+	float:right;		
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	position: relative;
+}
+
+#content #inside-box #tv-background {
+	width: 980px; 
+	height: 658px;
+	background-color: #000;
+
+	position:absolute;
+	top:55px;
+	left:116px;
+}
+
+#content #inside-box #static {
+	width: 702px; 
+	height: 658px;
+
+	position:absolute;
+	top: 55px;
+	left: 170px;
+
+	/*visibility:hidden;*/
+}
+
+#content #inside-box #tv-frame {
+	width: 980px; 
+	height: 658px; 
+	margin-top: 0px;
+	padding: 0px 0px 0px 0px;
+
+	position:absolute;
+	top: 55px;
+	left: 116px;
+
+	/*pointer-events: none;	*/
+}	
+
+#content #inside-box #flash-frame {		
+	width: 736px;
+	height: 560px;
+
+	position:absolute;
+	top: 102px;
+	left: 153px;
+}
+
+#content #inside-box #flash-frame #animation-title {	
+	width: 560px;
+	height: 179px;
+	border-radius: 10px;
+	border: 3px solid #f1deb5;
+	background-color: #000; 
+
+	position: absolute;
+	top: 83px;
+	left: 89px;
+}
+
+#content #inside-box #flash-frame #animation-title #animation-title-inside {	
+	color: #f1deb5;
+	width: 530px;
+	height: 149px;
+	padding: 15px;
+}
+
+#content #box #inside-box #flash-frame #games {	
+	width: 338px;
+	border: 3px solid #f1deb5;
+	border-radius: 10px;
+	background-color: #000; 
+
+	position: absolute;
+	top: 314px;
+	left: 203px;
+}
+
+#content #box #inside-box #flash-frame #games #link-1 {
+	width:126px;
+	margin-top: 10px;
+}
+
+#content #box #inside-box #flash-frame #games #link-2 {
+	width:238px;
+}
+
+#content #box #inside-box #flash-frame #games #link-3 {
+	width:230px;
+}
+
+#content #box #inside-box #flash-frame #games #link-4 {
+	width:140px;
+}
+
+#content #box #inside-box #flash-frame #games li {
+
+	/* 
+	To center the list items use one of the two list items below. The margin method works but display method might be needed if the margin method doesn't work in i.e. The display method requires br tags after each li in the html 
+	*/
+
+	/*
+	display:inline-block;
+      display:inline; // IE7
+      zoom:1; // IE7
+      */
+
+      margin:0px auto 15px auto;
+}
+
+#content #box #inside-box #flash-frame #games li a {
+	text-decoration: none;
+	color: #f1deb5;
+}
+
+#content #box #inside-box #flash-frame #games li a:hover {
+	text-decoration: none;
+	color: #000;
+	background-color: #f1deb5;
+}
+
+#content #inside-box #flash-frame #nav-buttons {	
+	height: 45px;
+
+	position: absolute;
+	top: -36px;
+	left: -45px;
+}
+
+#content #inside-box #flash-frame #nav-buttons #button-left {	
+}
+
+#content #inside-box #flash-frame #nav-buttons #button-right {	
+	position: absolute;
+	top: 0px;
+	left: 748px;
+}
+
+#content #inside-box #flash-frame #nav-buttons span a {	
+	text-decoration: none;
+	color:#000;
+}
+#content #inside-box #flash-frame #nav-buttons span a:hover {	
+	text-decoration: none;
+	color: #f1deb5;
+	background-color:#000;
+}
+
+#content #inside-box #flash-frame #flash-content {	
+	width: 640px;
+	height: 480px;
+	margin: 0px auto 0px auto;
+	padding: 0px 0px 0px 0px;
+	border-radius: 50px;
+}
+
+#content #box #inside-box #flash-frame #flashContent object .CentralParkZooKiosk {	
+	width: 741px;
+	height: 559px;
+	border-radius:20px;
+	position: absolute;
+	top: 3px;
+	left: -6px;
+}
+
+#content #box #inside-box #flash-frame #flashContent object .FaceBuilder{	
+	width: 762px;
+	height: 570px;
+	border-radius:20px;
+	position: absolute;
+	top: 0px;
+	left: -14px;
+}
+
+#content #box #inside-box #flash-frame #flashContent object .PeanutButterJellyTime {	
+	width: 736px;
+	height: 560px;
+	border-radius:20px;
+	position: absolute;
+	top: 3px;
+	left: -5px;
+}
+
+#content #box #inside-box #flash-frame #flashContent object .Ghostbusters{	
+	width: 754px;
+	height: 565px;
+	border-radius:20px;
+	position: absolute;
+	top: 0px;
+	left: -12px;
+}
+
+#footer {
+	text-align: center;
+	clear: left;
+}
+
+.floatLeft { float: left; }
+
+.floatRight { float: right; }
+
+a:link { 	
+	color: white;
+	padding: 3px;
+	border-radius: 4px; 
+}
+
+a:visited { 
+	color: white; 
+	padding: 3px;
+	border-radius: 4px; 
+}
+
+a:hover {
+	color:	#000000;
+	background-color: white;
+	padding: 3px;
+	border-radius: 4px;    
+}
+
+a:active {
+	text-decoration: none;
+	background-color: white;
+	position: relative;
+    	left: 15px;
+}
+
+span.floatLeft { float: left; }
+
+span.floatRight { float: right; }

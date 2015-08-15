@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Links to external jQuery -->
+        <!--
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        -->
+
+        <!-- Links to internal jQuery -->
+        <script src="assets/scripts/jquery-1.11.3.min.js"></script>
+        <script src="assets/scripts/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="assets/css/jquery.mobile-1.4.5.min.css">
+
+        <!-- Link to external Google fonts -->
+        <!-- <link href='http://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300italic,700,300' rel='stylesheet' type='text/css'> -->
+
+        <!-- Link to internal Google fonts -->
+        <link href='assets/css/google-styles.css' rel='stylesheet' type='text/css'>
+
+        <!-- Internal assests --> 
+        <script src="assets/scripts/panel-script.js"></script>
+        <script src="assets/scripts/pixel_chart.js"></script>
+        <link rel="stylesheet" href="assets/css/stylesheet.css">
+
+    </head>
+
+<body>
+    <div class="container">
+
+        <video autoplay loop poster="assets/images/output-bg.jpg" id="bg-video">
+            <!-- <source src="assets/videos/bg.webm" type="video/webm"> -->
+            <source src="assets/videos/bg.mp4" type="video/mp4">
+        </video>
+
+        <div id="play-pause">
+            <div id="pause"></div>
+            <div id="play"></div>    
+        </div>
+
+        <div class="back-next">
+            <div class="back" id="back-global"></div>
+            <div class="next" id="next-global"></div>    
+        </div>
+        
+        <!-- page one -->
+        <div data-role="page" id="page-1">
+            <div data-role="main" class="ui-content">
+                    
+                <div id="page-one-text-top">
+                    In patients with gout, ongoing sUA<br />
+                    elevations can lead to damaging<br />
+                    monosodium urate (MSU) crystal<br /> 
+                    deposition, and eventually<br />
+                    permanent bone and joint damage.<div id="page-one-lh">1</div>
+                </div>
+                
+                <div id="page-one-text-bottom">
+                    <b>Reference: 1.</b> Taylor JW, Grainger R. Clinical features of gout. In: Terkeltaub R, ed. <i>Gout</i><br /> 
+                    <i>and Other Crystal Arthropathies</i>. 1st ed. Philadelphia, PA: Elsevier Saunders; 2012:105-120.
+                </div>
+
+                <div id="next-one"></div>
+
+                <div class="back-next">
+                    <a href="#page-8" onclick="numDown();" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                        <div class="back"></div>
+                    </a>
+                    <a href="#page-2" onclick="numUp();" data-transition="slide" style="text-decoration: none;">
+                        <div class="next"></div>
+                    </a>       
+                </div>
+
+            </div>
+        </div> 
+
+        <!-- page two -->
+
+        <div data-role="page" id="page-2">
+            <div data-role="main" class="ui-content">
+
+                <div class="center-div">
+                    <div id="page-two-chart">
+                        <div id="col-2015-06-10" class="column"></div>
+                        <div id="col-2015-06-11" class="column"></div>
+                        <div id="col-2015-06-12" class="column"></div>
+                        <div id="col-2015-06-13" class="column"></div>    
+                    </div> <!-- END CHART -->
+
+                    <div id="page-two-text-side" class="chart-side-text">
+                        sUA levels<br />
+                        <360 &#956;mol/L<br />
+                        <span class="letterspace">(</span>&#60;<span class="letterspace-3">6</span> mg/d<span class="letterspace-2">L</span><span class="letterspace-3">)</span> are<br />
+                        recommended<br />
+                        for all patients<br />
+                        with gout, and<br />
+                        even lower than<br />
+                        that for patients<br />
+                        with extensive<br />
+                        tophi and a high<br /> 
+                        crystal load.<div class="text-side-sup">1-5</div>
+                    </div>
+
+                    <div class="text-bottom">
+                        <b>References: 1.</b> Zhang W, Doherty M, Bardin T, et al. EULAR evidence based recommendations for gout. Part II: management. Report of a task force of the EULAR Standing Committee for International Clinical Studies Including Therapeutics (ESCISIT). <i>Ann Rheum Dis</i>. 2006;65(10):1312-1324. <b>2.</b> Richette P, Doherty M, Pascual E,<br /> 
+                        et al. Updated EULAR evidence-based recommendations for the management of gout. <i>Ann Rheum Dis</i>. 2014;73(suppl 2):S783-S784. <b>3.</b> Khanna D, Fitzgerald JD, Khanna PP, et al. 2012 American College of Rheumatology guidelines for management of gout. Part 1: systematic nonpharmacologic and pharmacologic therapeutic<br /> 
+                        approaches to hyperuricemia. <i>Arthritis Care Res</i> (Hoboken). 2012;64(10):1431-1446. <b>4.</b> Sivera F, Andres M, Carmona L, et al. Multinational evidence-based recommendations for the diagnosis and management of gout: integrating systematic literature review and expert opinion of a broad panel of rheumatologists in the 3e<br /> 
+                        initiative. <i>Ann Rheum Dis</i>. 2014;73(2):328-335. <b>5.</b> Jordan KM, Cameron JS, Snaith M, et al. British Society for Rheumatology and British Health Professionals in Rheumatology guideline for the management of gout. <i>Rheumatology</i> (Oxford). 2007;46(8):1372-1374.
+                    </div>
+
+                </div> <!-- END CENTER DIV -->
+
+                <div id="page-two-title"></div>
+
+                <div class="back-next">
+                    <a href="#page-1" onclick="numDown();" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                        <div class="back"></div>
+                    </a>
+                    <a href="#page-3" onclick="numUp();" data-transition="slide" style="text-decoration: none;">
+                        <div class="next"></div>
+                    </a>  
+                </div>
+
+            </div> <!-- END ui-content -->
+        </div> <!-- END page 2 --> 
+       
+        <!-- page three -->
+
+        <div data-role="page" id="page-3">
+            <div data-role="main" class="ui-content">
+
+                <div id="page-three-text-top">
+                    MSU crystal deposition continues<br />
+                    during asymptomatic periods<br /> 
+                    between acute gout flares.<div id="page-three-lh">1-4</div>
+                </div>
+
+                <div id="page-three-text-bottom">
+                    <b>References: 1</b>. Terkeltaub R, Edwards NL. Disease definition and overview of pathogenesis of hyperuricemia and gouty<br />inflammation. In: Terkeltaub R, Edwards NL, eds. <i>Gout: Diagnosis and Management of Gouty Arthritis and Hyperuricemia</i>.<br /> 
+
+                    3rd ed. Durant, OK: Professional Communications, Inc; 2013:19-47. <b>2.</b> Dalbeth N, Stamp L. Hyperuricaemia and gout: time<br />
+
+                     for a new staging system? <i>Ann Rheum Dis</i>. 2014;73(9):1598-1600. <b>3.</b> Schumacher HR Jr. The pathogenesis of gout. <i>Cleve Clin</i><br />
+
+                    <span id="adjust"><i>J Med</i>. 2008;75(suppl 5):S2-S4. <b>4.</b> Taylor JW, Grainger R. Clinical features of gout. In: Terkeltaub R, ed. <i>Gout and Other</i></span><br />
+
+                    <i>Crystal Arthropathies</i>. 1st ed. Philadelphia, PA: Elsevier Saunders; 2012:105-120.    
+                </div>
+
+                <div id="next-three"></div>
+       
+                <div class="back-next">
+                    <a href="#page-2" onclick="numDown();" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                        <div class="back"></div>
+                    </a>
+                    <a href="#page-4" onclick="numUp();" data-transition="slide" style="text-decoration: none;">
+                        <div class="next"></div>
+                    </a>                 
+                </div>
+
+            </div>
+        </div> 
+
+        <!-- page four -->
+
+        <div data-role="page" id="page-4">
+            <div data-role="main" class="ui-content">
+
+                <div class="center-div">
+
+                    <div id="page-four-chart">
+                        <div id="col-us" class="column"></div>
+                        <div id="col-uk" class="column"></div>
+                        <div id="col-germany" class="column"></div>
+                        <div id="col-canada" class="column"></div>
+                        <div id="col-brazil" class="column"></div>
+                        <div id="col-france" class="column"></div>
+                        <div id="col-italy" class="column"></div>
+                        <div id="col-spain" class="column"></div>     
+                    </div> <!-- END CHART -->
+
+                    <div id="page-four-text-side" class="chart-side-text">
+                        sUA levels<br />
+                        <360 &#956;mol/L<br />
+                        <span class="letterspace">(</span>&#60;<span class="letterspace-3">6</span> mg/d<span class="letterspace-2">L</span><span class="letterspace-3">)</span> are<br />
+                        recommended<br />
+                        for all patients<br />
+                        with gout, and<br />
+                        even lower than<br />
+                        that for patients<br />
+                        with extensive<br />
+                        tophi and a high<br /> 
+                        crystal load.<div class="text-side-sup">1-5</div>
+                    </div>
+
+                    <div class="text-bottom">
+                        <b>References: 1.</b> Zhang W, Doherty M, Bardin T, et al. EULAR evidence based recommendations for gout. Part II: management. Report of a task force of the EULAR Standing Committee for International Clinical Studies Including Therapeutics (ESCISIT). <i>Ann Rheum Dis</i>. 2006;65(10):1312-1324. <b>2.</b> Richette P, Doherty M, Pascual E,<br /> 
+                        et al. Updated EULAR evidence-based recommendations for the management of gout. <i>Ann Rheum Dis</i>. 2014;73(suppl 2):S783-S784. <b>3.</b> Khanna D, Fitzgerald JD, Khanna PP, et al. 2012 American College of Rheumatology guidelines for management of gout. Part 1: systematic nonpharmacologic and pharmacologic therapeutic<br /> 
+                        approaches to hyperuricemia. <i>Arthritis Care Res</i> (Hoboken). 2012;64(10):1431-1446. <b>4.</b> Sivera F, Andres M, Carmona L, et al. Multinational evidence-based recommendations for the diagnosis and management of gout: integrating systematic literature review and expert opinion of a broad panel of rheumatologists in the 3e<br /> 
+                        initiative. <i>Ann Rheum Dis</i>. 2014;73(2):328-335. <b>5.</b> Jordan KM, Cameron JS, Snaith M, et al. British Society for Rheumatology and British Health Professionals in Rheumatology guideline for the management of gout. <i>Rheumatology</i> (Oxford). 2007;46(8):1372-1374.
+                    </div>
+
+                </div> <!-- END CENTER DIV -->
+
+                <div id="page-four-title"></div>
+
+                <div class="back-next">
+                    <a href="#page-3" onclick="numDown();" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                        <div class="back"></div>
+                    </a>
+                    <a href="#page-5" onclick="numUp();" data-transition="slide" style="text-decoration: none;">
+                        <div class="next"></div>
+                    </a>
+                </div>
+
+            </div> <!-- END UI-CONTENT -->
+        </div> <!-- END PAGE 4 -->
+
+        <!-- page five -->
+
+        <div data-role="page" id="page-5">
+            <div data-role="main" class="ui-content">
+
+                <div id="page-five-text-top">
+                    To dissolve existing crystals and halt<br /> 
+                    new crystals from forming, treatment<br /> 
+                    guidelines recommend keeping sUA levels<br /> 
+                    consistently at or below 360 &#956;mol/L<br /> 
+                    (6 mg/dL) in patients with gout,<br /> 
+                    which is below the MSU saturation point.<div id="page-five-lh">1-5</div>
+                </div>
+
+                <div id="page-five-text-bottom">
+                    <b>References: 1.</b> Zhang W, Doherty M, Bardin T, et al. EULAR evidence based recommendations for gout. Part II: management. Report of a task force of the<br/> 
+                    EULAR Standing Committee for International Clinical Studies Including Therapeutics (ESCISIT). <i>Ann Rheum Dis</i>. 2006;65(10):1312-1324. <b>2.</b> Richette P, Doherty M,<br />
+                    Pascual E, et al. Updated EULAR evidence-based recommendations for the management of gout. <i>Ann Rheum Dis</i>. 2014;73(suppl 2):S783-S784. <b>3.</b> Khanna D,<br />  
+                    Fitzgerald JD, Khanna PP, et al. 2012 American College of Rheumatology guidelines for management of gout. Part 1: systematic nonpharmacologic and<br/>
+                    pharmacologic therapeutic approaches to hyperuricemia. <i>Arthritis Care Res</i> (Hoboken). 2012;64(10):1431-1446. <b>4.</b> Sivera F, Andres M, Carmona L, et al.<br />
+                    Multinational evidence-based recommendations for the diagnosis and management of gout: integrating systematic literature review and expert opinion of a<br />
+                    broad panel of rheumatologists in the 3e initiative. <i>Ann Rheum Dis</i>. 2014;73(2):328-335. <b>5.</b> Jordan KM, Cameron JS, Snaith M, et al. British Society for<br />
+                    Rheumatology and British Health Professionals in Rheumatology guideline for the management of gout. <i>Rheumatology</i> (Oxford). 2007;46(8):1372-1374.
+                </div>
+
+                <div id="next-five"></div>
+
+                <div class="back-next">
+                    <a href="#page-4" onclick="numDown();" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                        <div class="back"></div>
+                    </a>
+                    <a href="#page-6" onclick="numUp();" data-transition="slide" style="text-decoration: none;">
+                        <div class="next"></div>
+                    </a> 
+                </div>
+
+            </div>
+        </div> 
+
+        <!-- page six -->
+
+        <div data-role="page" id="page-6">
+            <div data-role="main" class="ui-content">
+                <div class="center-div">
+
+                    <div id="page-six-chart">
+                        <div id="col-F" class="column"></div>
+                        <div id="col-M" class="column"></div>
+                    </div> <!-- END CHART -->
+
+                    <div id="page-six-text-side" class="chart-side-text">
+                        sUA levels<br />
+                        <360 &#956;mol/L<br />
+                        <span class="letterspace">(</span>&#60;<span class="letterspace-3">6</span> mg/d<span class="letterspace-2">L</span><span class="letterspace-3">)</span> are<br />
+                        recommended<br />
+                        for all patients<br />
+                        with gout, and<br />
+                        even lower than<br />
+                        that for patients<br />
+                        with extensive<br />
+                        tophi and a high<br /> 
+                        crystal load.<div class="text-side-sup">1-5</div>
+                    </div>
+
+                    <div class="text-bottom">
+                        <b>References: 1.</b> Zhang W, Doherty M, Bardin T, et al. EULAR evidence based recommendations for gout. Part II: management. Report of a task force of the EULAR Standing Committee for International Clinical Studies Including Therapeutics (ESCISIT). <i>Ann Rheum Dis</i>. 2006;65(10):1312-1324. <b>2.</b> Richette P, Doherty M, Pascual E,<br /> 
+                        et al. Updated EULAR evidence-based recommendations for the management of gout. <i>Ann Rheum Dis</i>. 2014;73(suppl 2):S783-S784. <b>3.</b> Khanna D, Fitzgerald JD, Khanna PP, et al. 2012 American College of Rheumatology guidelines for management of gout. Part 1: systematic nonpharmacologic and pharmacologic therapeutic<br /> 
+                        approaches to hyperuricemia. <i>Arthritis Care Res</i> (Hoboken). 2012;64(10):1431-1446. <b>4.</b> Sivera F, Andres M, Carmona L, et al. Multinational evidence-based recommendations for the diagnosis and management of gout: integrating systematic literature review and expert opinion of a broad panel of rheumatologists in the 3e<br /> 
+                        initiative. <i>Ann Rheum Dis</i>. 2014;73(2):328-335. <b>5.</b> Jordan KM, Cameron JS, Snaith M, et al. British Society for Rheumatology and British Health Professionals in Rheumatology guideline for the management of gout. <i>Rheumatology</i> (Oxford). 2007;46(8):1372-1374.
+                    </div>
+
+                </div> <!-- END CENTER DIV -->
+
+                <div id="page-six-title"></div>
+
+                <div class="back-next">
+                    <a href="#page-5" onclick="numDown();" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                        <div class="back"></div>
+                    </a>
+                    <a href="#page-7" onclick="numUp();" data-transition="slide" style="text-decoration: none;">
+                        <div class="next"></div>
+                    </a>
+                </div>
+
+            </div> <!-- END UI-CONTENT -->
+        </div> <!-- END PAGE 6 -->
+
+        <!-- page seven -->
+
+        <div data-role="page" id="page-7">
+            <div data-role="main" class="ui-content">
+
+                <div id="page-seven-text-top">
+                    In up to 90% of patients with gout,<br /> 
+                    hyperuricemia results from inefficient<br /> 
+                    renal excretion, possibly due to<br />
+                    alterations in transporter function.<div id="page-seven-lh">1</div>
+                </div>
+
+                <div id="page-seven-text-bottom">
+                    <b>Reference: 1.</b> Burns CM, Wortman RL. Clinical features and treatment of gout. In: Firestein GS, Budd RC, Gabriel S,<br />
+                    et al, eds. <i>Kelley&apos;s Textbook of Rheumatology</i>. 9th ed. Philadelphia, PA: Elsevier Saunders; 2013:1554-1575.
+                </div>
+
+                <div id="next-seven"></div>
+              
+                <div class="back-next">
+                    <a href="#page-6" onclick="numDown();" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                        <div class="back"></div>
+                    </a>
+                    <a href="#page-8" onclick="numUp();" data-transition="slide" style="text-decoration: none;">
+                        <div class="next"></div>
+                    </a> 
+                </div>
+
+            </div>
+        </div> 
+
+        <!-- page eight -->
+
+        <div data-role="page" id="page-8">
+            <div data-role="main" class="ui-content">
+              
+                <div class="center-div">
+
+                    <div id="page-eight-chart">
+                        <div id="col-2" class="column"></div>
+                        <div id="col-3" class="column"></div>
+                        <div id="col-4" class="column"></div>
+                        <div id="col-5" class="column"></div>
+                        <div id="col-6" class="column"></div>
+                        <div id="col-7" class="column"></div>
+                    </div> <!-- END CHART -->
+
+                    <div id="page-eight-text-side" class="chart-side-text">
+                        sUA levels<br />
+                        <360 &#956;mol/L<br />
+                        <span class="letterspace">(</span>&#60;<span class="letterspace-3">6</span> mg/d<span class="letterspace-2">L</span><span class="letterspace-3">)</span> are<br />
+                        recommended<br />
+                        for all patients<br />
+                        with gout, and<br />
+                        even lower than<br />
+                        that for patients<br />
+                        with extensive<br />
+                        tophi and a high<br /> 
+                        crystal load.<div class="text-side-sup">1-5</div>
+                    </div>
+
+                    <div class="text-bottom">
+                        <b>References: 1.</b> Zhang W, Doherty M, Bardin T, et al. EULAR evidence based recommendations for gout. Part II: management. Report of a task force of the EULAR Standing Committee for International Clinical Studies Including Therapeutics (ESCISIT). <i>Ann Rheum Dis</i>. 2006;65(10):1312-1324. <b>2.</b> Richette P, Doherty M, Pascual E,<br /> 
+                        et al. Updated EULAR evidence-based recommendations for the management of gout. <i>Ann Rheum Dis</i>. 2014;73(suppl 2):S783-S784. <b>3.</b> Khanna D, Fitzgerald JD, Khanna PP, et al. 2012 American College of Rheumatology guidelines for management of gout. Part 1: systematic nonpharmacologic and pharmacologic therapeutic<br /> 
+                        approaches to hyperuricemia. <i>Arthritis Care Res</i> (Hoboken). 2012;64(10):1431-1446. <b>4.</b> Sivera F, Andres M, Carmona L, et al. Multinational evidence-based recommendations for the diagnosis and management of gout: integrating systematic literature review and expert opinion of a broad panel of rheumatologists in the 3e<br /> 
+                        initiative. <i>Ann Rheum Dis</i>. 2014;73(2):328-335. <b>5.</b> Jordan KM, Cameron JS, Snaith M, et al. British Society for Rheumatology and British Health Professionals in Rheumatology guideline for the management of gout. <i>Rheumatology</i> (Oxford). 2007;46(8):1372-1374.
+                    </div>
+
+                </div> <!-- END CENTER DIV -->
+
+                <div id="page-eight-title"></div>
+
+                <div class="back-next">
+                    <a href="#page-7" onclick="numDown();" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                        <div class="back"></div>
+                    </a>
+                    <a href="#page-1" onclick="numUp();" data-transition="slide" style="text-decoration: none;">
+                        <div class="next"></div>
+                    </a>   
+                </div>
+                
+            </div> <!-- END UI_CONTENT -->
+        </div> <!-- END PAGE 8 -->
+
+        <div class="foot">
+            <div class="foot-text">March 2015 - Atlas ID: 716.909,011 - Expiry date 13 June 2015</div>
+            <div class="az-logo"></div>
+        </div>
+    </div> <!-- END Container -->
+   
+</body>
+</html>

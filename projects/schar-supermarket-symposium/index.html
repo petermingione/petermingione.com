@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Schar Newsletter</title>
+
+	<style type="text/css">
+		/* Based on The MailChimp Reset INLINE: Yes. */  
+		/* Client-specific Styles */
+		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+
+		body{
+      width:100% !important; 
+      -webkit-text-size-adjust:100%; 
+      -ms-text-size-adjust:100%; 
+      margin:0; padding:0; 
+      background-color: #85c4bb;
+      font-family: Arial, Verdana, Geneva, sans-serif; 
+    }
+
+		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */ 
+
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+		/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+
+		#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+		/* End reset */
+		/* Some sensible defaults for images
+		Bring inline: Yes. */
+
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+
+		a img {border:none;} 
+
+		.image_fix {display:block;}
+
+		/* Yahoo paragraph fix
+		Bring inline: Yes. */
+		p {margin: 1em 0;}
+
+		/* Hotmail header color reset
+		Bring inline: Yes. */
+		h1, h2, h3, h4, h5, h6 {color: black;}      //!important;
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue;}     //!important;
+
+		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+		color: red !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email 
+    clients, this was added just for good measure. */
+		}
+
+		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+		color: purple !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+
+		/* Outlook 07, 10 Padding issue fix
+		Bring inline: No.*/
+		table td {border-collapse: collapse;}
+
+		/* Remove spacing around Outlook 07, 10 tables
+		Bring inline: Yes */
+		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+
+		/* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+		Bring inline: Yes. */
+		a {color: orange;}
+
+
+
+		/***************************************************
+		****************************************************
+		MOBILE TARGETING
+		****************************************************
+		***************************************************/
+
+		@media only screen and (max-device-width: 480px) {
+
+			/* Part one of controlling phone number linking for mobile. */
+			a[href^="tel"], a[href^="sms"] {
+						text-decoration: none;
+						color: blue; /* or whatever your want */
+						pointer-events: none;
+						cursor: default;
+					}
+
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+						text-decoration: default;
+						color: orange !important;
+						pointer-events: auto;
+						cursor: default;
+					}
+		}
+
+		/* More Specific Targeting */
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+		  /* You guessed it, ipad (tablets, smaller screens, etc) */
+			/* repeating for the ipad */
+			a[href^="tel"], a[href^="sms"] {
+						text-decoration: none;
+						color: blue; /* or whatever your want */
+						pointer-events: none;
+						cursor: default;
+					}
+
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+						text-decoration: default;
+						color: orange !important;
+						pointer-events: auto;
+						cursor: default;
+					}
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		/* Put your iPhone 4g styles in here */ 
+		}
+
+		/* Android targeting */
+		@media only screen and (-webkit-device-pixel-ratio:.75){
+		/* Put CSS for low density (ldpi) Android layouts in here */
+		}
+
+		@media only screen and (-webkit-device-pixel-ratio:1){
+		/* Put CSS for medium density (mdpi) Android layouts in here */
+		}
+
+		@media only screen and (-webkit-device-pixel-ratio:1.5){
+		/* Put CSS for high density (hdpi) Android layouts in here */
+		}
+
+		/* end Android targeting */
+	</style>
+
+
+
+	<!-- Targeting Windows Mobile -->
+	<!--[if IEMobile 7]>
+	<style type="text/css">
+	</style>
+	<![endif]-->   
+	<!-- ***********************************************
+	****************************************************
+	END MOBILE TARGETING
+	****************************************************
+	************************************************ -->
+	<!--[if gte mso 9]>
+		<style>
+		/* Target Outlook 2007 and 2010 */
+		</style>
+	<![endif]-->
+
+
+
+</head>
+<body bgcolor="#85c4bb">
+<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+<table cellpadding="0" width="600" cellspacing="0" border="0" id="backgroundTable"> <!--wrapper table-->
+  <tr> <!--wrapper table row 1-->
+    <td valign="top"> <!--wrapper table row 1 cell 1-->
+    <table width="600" cellpadding="0" cellspacing="0" border="0" align="center">
+      <tr>
+        <td valign="top">
+            <img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="22" />
+        </td>
+      </tr>
+            
+      <tr>
+        <td valign="top">
+          <img class="image_fix" src="imgs/top_graphic.gif" alt="" title="" width="600" height="121" />
+        </td>
+      </tr>
+            
+      <tr>
+        <td valign="top">
+            <img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="20" />
+        </td>
+      </tr>
+            
+      <tr>
+        <td>
+          <table width="600" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="12" class="image_fix"><img src="imgs/content_top.gif" width="600" height="12"  alt=""/></td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF" style="background-color:#FFFFFF" align="center">
+                      
+                        
+                        <table width="544" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td>
+                              <h1 style="font-size:25px; color: #018c7d; font-weight:lighter;">Dear XXXXXX,</h1>
+                    
+                    
+                              <p style="font-size:15px; color:#707070; font-weight:lighter;">The Dr Schar Professional Team thanks you for connecting with us at the Super Market Symposium conference.  It was a pleasure to meet you and we hope to continue to further our relationship.</p>
+                              <p style="font-size:15px; color:#707070; font-weight:lighter;">In Good Health,</p>
+                               
+                              <img class="image_fix" src="imgs/signature.gif" alt="" title="" width="181" height="30" />
+                              <br /> 
+                              <span style="font-size:16px; color: #018c7d; font-weight:lighter;">Anne Lee, EdD, RD, LD</span><br/>
+                              <span style="font-size:15px; color:#707070; font-weight:lighter;">Director of Nutritional Services</0span>
+                              
+                            </td>
+                          </tr>
+                      </table>
+                   
+                    
+                    
+                    <table width="544" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="30" /></td>
+                      </tr>
+                      <tr>
+                        <td><img class="image_fix" src="imgs/hr_line.gif" alt="" title="" width="100%" height="1" /></td>
+                      </tr>
+                      <tr>
+                        <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="20" /></td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <table width="544" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><img class="image_fix" src="imgs/portrait.jpg" alt="" title="" width="172" height="200" /></td>
+                                    <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="20" height="1" /></td>
+                                    <td align="left" valign="top">
+                                      <h2 style="font-size:23px; color: #018c7d; font-weight:lighter;">Why the Dr Schar Institute?</h2>
+                                        <ul style="margin:0px; padding:0px; padding-left:20px; font-size:15px; color:#707070; font-weight:lighter; list-style-image: url('imgs/green_bullet.gif');">
+
+                                            <li>Through the Dr Schar Institute, we collaborate with the world’s specialists to bring you the latest information, cutting edge research, and patient care updates in the fields of gluten intolerance and celiac disease. The institute is free for Health Care Professionals and is password protected.</li>  <br />
+
+                                            <li>Sign up to access the most current information by following this link: <a style="font-size:15px; color:#707070; font-weight:lighter;" href="">www.drschaer-institute.com/us</li>
+
+                                        </ul>
+                                    </td>
+                                  </tr>
+                                </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="20" /></td>
+                      </tr>
+                      <tr>
+                        <td><img class="image_fix" src="imgs/hr_line.gif" alt="" title="" width="100%" height="1" /></td>
+                      </tr>
+                     
+                      <tr>
+                        <td>
+                        
+                          <table width="544" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="10" /></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <h2 style="font-size:23px; color: #018c7d; font-weight:lighter;">Dr Schar Institute Resources</h2>
+                                <p style="font-size:15px; color:#707070; font-weight:lighter;">Dr Schar has numerous resources for dietitians – no matter your practice setting.</p>
+                                <table width="544" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><img class="image_fix" src="imgs/green_bullet.gif" alt="" title="" width="7" height="7" /></td>
+                                    <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="7" height="1" /></td>
+                                    <td style="font-size:15px; color:#202020;">Our Schar Welcome Package Program</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td><table width="480" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td colspan="3"><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="10" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><img class="image_fix" src="imgs/yellow_bullet.gif" alt="" title="" width="5" height="5" /></td>
+                                        <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="7" height="1" /></td>
+                                        <td valign="top">
+
+                                          <p style="margin:0px; font-size:15px; color:#707070; font-weight:lighter;">One of our most acclaimed resources is our Welcome Package. The Welcome Package program is designed to make the transition to a gluten free lifestyle easy. Our kit includes a sample of one of our shelf stable breads, pasta, a sweet treat, a kitchen magnet with tips on avoiding cross contamination, a coupon, and educational materials. It also includes a DVD from our YouTube series  ‘Better Without’. The series includes tips and information on the gluten free diet, shopping, dining out, as well as travels.</p>
+
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;</td>
+                                        <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="7" height="1" /></td>
+                                        <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><img class="image_fix" src="imgs/yellow_bullet.gif" alt="" title="" width="5" height="5" /></td>
+                                        <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="7" height="1" /></td>
+                                        <td valign="top">
+
+                                          <p style="margin:0px; font-size:15px; color:#707070; font-weight:lighter;"> All the information your client needs to successfully live a happy, healthy gluten free life. If you think this program would be a benefit to your facility resources, please complete the attached form and either scan/email or fax it back us. </p>
+
+                                      </td>
+                                      </tr>
+                                    </table></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="3"><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="20" /></td>
+                                  </tr>
+                                  <tr>
+                                    <td><img class="image_fix" src="imgs/green_bullet.gif" alt="" title="" width="7" height="7" /></td>
+                                    <td>&nbsp;</td>
+
+
+                                    <td style="font-size:15px; color:#202020;">Educational Materials for Store &amp; Clients</td>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                      <table width="480" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                        <td colspan="3"><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="10" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><img class="image_fix" src="imgs/yellow_bullet.gif" alt="" title="" width="5" height="5" /></td>
+                                        <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="7" height="1" /></td>
+                                        <td valign="top">
+
+                                          <p style="margin:0px; font-size:15px; color:#707070; font-weight:lighter;">We can also provide you with educational materials for your store and clients. Everything from a one page guide on celiac disease and gluten sensitivity to more detailed booklets on living a gluten free lifestyle. The list of materials is attached in our educational packet order form. Simply complete the attached form and either scan or fax it back.</p>
+
+                                        </td>
+                                      </tr>
+                                    </table></td>
+                                  </tr>
+                                </table></td>
+                            </tr>
+                            <tr>
+                              <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="20" /></td>
+                            </tr>
+                            <tr>
+                              <td align="center"><a href="#"><img class="image_fix" src="imgs/big_btn.gif" alt="" title="" width="472" height="38" /></a></td>
+                            </tr>
+                             <tr>
+                              <td><img class="image_fix" src="imgs/spacer.gif" alt="" title="" width="1" height="20" /></td>
+                            </tr>
+                        </table>
+                        
+                        </td>
+                      </tr>
+                    </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="10" class="image_fix" bgcolor="#FFFFFF"><img src="imgs/content_bottom.gif" width="600" height="12"  alt=""/></td>
+                  </tr>
+                </table>
+                </td>
+            </tr>
+            
+            <tr>
+              <td>
+                <table width="600" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                    <img src="imgs/spacer.gif" width="1" height="30"  alt=""/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <table width="600" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td style="font-size:13px; color:#505050; font-weight:lighter;">
+
+                                    <a style="font-size:13px; color:#505050; font-weight:lighter;" href="#">Click here</a> to opt-out of our newsletter.
+
+                                    <p>© All rights reserved for Dr. Schär GmbH</p>
+                                    
+                                    <P>Dr. Schar USA Inc., 1050 Wall Street West, Suite 370, Lyndhurst, NJ 07071</p>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td valign="top">
+                            <table width="100" border="0" cellpadding="0" cellspacing="0" style="vertical-align:top;">
+                             <tr> 
+                                <td colspan="3" align="right" style="font-size:20px; color:#000000;">Follow us!</td>
+                               
+                              </tr>
+                              <tr>
+                                <td colspan="3" align="right"><img src="imgs/spacer.gif" width="10" height="1"  alt=""/></td>
+                              </tr>
+                              <tr>
+                                <td align="right" valign="bottom"><img src="imgs/fb_icon.gif" width="23" height="23"  alt=""/></td>
+                                <td><img src="imgs/spacer.gif" width="1" height="1"  alt=""/></td>
+                                <td width="28" align="right" valign="bottom"><img src="imgs/twitter_btn.gif" width="23" height="22"  alt=""/></td>
+                              </tr>
+                            </table>
+                            </td>
+                          </tr>
+                        </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="imgs/spacer.gif" width="1" height="20"  alt=""/></td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                      <p style="font-size:13px; color:#505050; font-weight:lighter; margin-bottom:30px;">This promotional/informative e-mail has been sent to you because you have agreed to receive such e-mails or because of an existing customer relationship with our company. We would like to inform you that, in accordance with art. 7.4, item b) of legislative decree 196/03, you have the right at any time to refuse to receive any further promotional e-mails, by sending an e-mail on this subject to the following address: info@schar.com. You may also exercise all other rights under art. 7 of said decree.
+                      </p>
+
+                    </td>
+                  </tr>
+                </table>
+                </td>
+            </tr>
+    </table>
+    </td><!-- END wrapper table row 1 cell 1-->
+  </tr> <!--END wrapper table row 1-->
+</table><!-- End of wrapper table -->
+</body>
+</html>

@@ -1,0 +1,678 @@
+/*ALL PAGES*/
+
+body {
+    /*background : transparent url(../images/output-bg.jpg) center repeat fixed !important;*/
+    background : #000 url(../images/output-bg.jpg) center no-repeat fixed !important;
+    text-shadow: 0 0px 0 transparent !important;
+    font-family: "Open Sans" , Helvetica , Arial , Sans-Serif;
+    overflow: hidden;
+}
+
+b { font-weight: bold; }
+
+i { font-style: italic; }
+
+.letterspace{letter-spacing: -3px;}
+
+.letterspace-2{letter-spacing: -1px;}
+
+.letterspace-3{letter-spacing: -6px;}
+
+.page-container{
+    overflow: hidden;
+}
+
+.container video#bg-video {
+    /*position: fixed; right: 0; bottom: 0;*/
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background: url(../images/output-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.ui-page{
+    background : transparent;
+    text-shadow: 0 0px 0 transparent !important;
+    overflow: hidden !important;
+}
+
+.ui-content{
+    background: transparent;
+    text-shadow: 0 0px 0 transparent !important;
+    overflow: hidden !important;
+}
+
+.container{
+
+    background : transparent;
+    overflow: hidden;
+    margin: auto;
+    text-shadow: 0 0px 0 transparent !important;
+
+    width:1920px;
+    height:1080px;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.foot{
+    width: 1920px;
+    height:40px;
+    margin: auto;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.foot .foot-text {
+    font-family: "Ropa Sans";
+    /*color: #7a656b;*/
+    color: #eae2e5;
+    font-size: 18px;
+    font-weight: lighter;
+ 
+    position: absolute;
+    top: 0px;
+    left: 92px;
+}
+
+.foot .az-logo{
+    width: 157px;
+    height: 40px;
+    background-image: url(../images/az.png);
+    background-size: 157px 38px;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: -18px;
+    right: 90px;
+}
+
+.center-div{
+    width: 1750px;
+    height: 900px;
+    background-color: #ececec;
+    border-radius:10px;
+
+    position: absolute;
+    top:112px;
+    left: 77px;
+   
+    margin: auto;
+}
+
+.center-div .text-bottom{
+    color: #6c6c6c;
+    font-family: "Open Sans";
+    font-size: 11px;
+   /* font-size: 69%;*/
+    letter-spacing: 0px;
+    line-height: 16px;
+
+    width: 2185px;
+    height: 73px;
+
+    position: absolute;
+    top: 824px;
+    left: 49px;
+
+   /* -webkit-text-size-adjust: none;*/
+    -webkit-font-size-adjust:none;
+}
+
+/*Sets each column in each chart*/
+.column{
+    width:72px;
+    height:646px;
+    position: absolute;
+    top: 5px;    
+}
+
+/*The div that contains a chart marker. */
+/*Each marker has three divs that represent the three states of the marker*/
+.chart-marker{
+    width: 72px;
+    height: 8px;
+    background-color: rgba(100,100,100,.15);
+    position: absolute;
+    left: 0px;
+}
+
+.chart-marker-red-dot{
+    width: 12px;
+    height: 12px;
+
+    background-image: url(../images/red-dot.png);
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    padding-top:1px;
+
+    position: absolute;
+    left:30px;
+}
+
+.chart-side-text{
+    width: 205px;
+    height: 340px;
+
+    color: #272727;
+    font-family: "Ropa Sans";
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 23px;
+
+    position: absolute;
+    top: 390px;
+    left: 1509px;   
+}
+
+.center-div .chart-side-text .text-side-sup{
+    position: absolute;
+    top: 225px;
+    left: 114px;
+    font-size: 15px;
+}
+
+.back-next{
+    position: absolute;
+    top: 15px;
+    left: 1640px;
+    width: 266px;
+    height: 62px;
+    z-index: 999;
+    cursor:pointer;
+    opacity: 0;
+}
+
+.back-next.show-buttons{
+    opacity: 100;
+}
+
+.back-next .back , 
+.back-next .next {
+    background-repeat: no-repeat;
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    width: 131px;
+    height: 62px;
+    float:left;
+}
+
+.back-next .back {
+   /* background-image: url(../images/back-black.png);*/
+}
+
+.back-next .next {
+   /* background-image: url(../images/next-black.png);*/
+    margin-left:4px;
+}
+
+#back-global {
+    background-image: url(../images/back-black.png);
+}
+
+#next-global {
+    background-image: url(../images/next-black.png);
+    margin-left:4px;
+}
+
+#play-pause{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 75px;
+    height: 75px;
+    z-index: 999;
+    cursor:pointer;
+    opacity: 0;
+}
+
+#play-pause.show-buttons{
+    opacity: 100;
+}
+
+#play-pause.button-hold{
+    opacity: 100;
+}
+
+#play-pause #play {
+    background-repeat: no-repeat;
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    width: 75px;
+    height: 75px;
+    float:left;
+    background-image: url(../images/play.png);
+    display: none;
+}
+
+#play-pause #pause {
+    background-repeat: no-repeat;
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    width: 75px;
+    height: 75px;
+    float:left;
+    background-image: url(../images/pause.png);
+}
+
+/* BEGIN PAGE 1 */
+
+#page-one-text-top{
+
+    /*background-image: url(../images/page-one-text-top.png);
+    background-size: 1740px 566px; 
+    background-repeat: no-repeat;*/
+
+    width: 1750px;
+    height: 566px;
+
+    position: absolute;
+    top: 251px;
+    left: 293px;
+
+    font-family: "Ropa Sans";
+    font-size: 90px;
+    color: #f3f3f3;
+    font-weight: normal;
+    line-height: 89px;
+    letter-spacing: 0px;
+}
+
+#page-one-text-top #page-one-lh{
+    font-size: 35px;
+    position: absolute;
+    top: 323px;
+    left: 1261px;
+}
+
+#page-one-text-bottom{
+    width: 1155px;
+    height: 63px;
+
+    font-family: "Open Sans";
+    font-size: 21px;
+    font-weight: normal;
+    color: #a29297;
+    line-height: 29px;
+
+    position: absolute;
+    top: 731px;
+    left: 293px;
+}
+
+#next-one{
+    width: 68px;
+    height: 80px;
+    background-image: url(../images/arrow.png);
+    background-size: 68px 80px;
+
+    position: absolute;
+    top: 436px;
+    left: 1678px;
+}
+
+/* END PAGE 1 */
+
+/* BEGIN PAGE 2 */
+
+#page-two-title{
+    width: 811px;
+    height: 172px;
+    background-image: url(../images/page-two-title.png);
+
+    position: absolute;
+    left: 560px;
+    top: 0px;
+
+}
+
+.center-div #page-two-chart{
+    width: 1402px;
+    height: 738px;
+    background-image: url(../images/page-two-chart.png);
+    background-repeat: no-repeat;
+    background-size: 1402px 738px;
+
+    position: absolute;
+    top: 63px;
+    left: 66px;
+}
+
+/*Each Column has an ID*/
+.center-div #page-two-chart #col-2015-06-10 {
+    left: 378px; 
+}
+
+.center-div #page-two-chart #col-2015-06-11 {
+    left: 625px;
+}
+
+.center-div #page-two-chart #col-2015-06-12 {
+    left: 870px;
+}
+
+.center-div #page-two-chart #col-2015-06-13 {
+    left: 1117px;
+}
+
+/* END PAGE 2 */
+/* BEGIN PAGE 3 */
+
+#page-three-text-top{
+
+    width: 1535px;
+    height: 337px;
+
+    font-family: "Ropa Sans";
+    font-size: 90px;
+    font-weight: normal;
+    color: #f3f3f3;
+    line-height: 89px;
+    letter-spacing: 0px;    
+
+    position: absolute;
+    top: 338px;
+    left: 342px;
+}
+
+#page-three-text-top #page-three-lh{
+    font-size: 35px;
+    position: absolute;
+    top: 146px;
+    left: 965px;
+}
+
+#page-three-text-bottom{
+
+    width: 1548px;
+    height: 206px;
+
+    font-family: "Open Sans";
+    font-size: 21px;
+    color: #a29297;
+    line-height: 29px;
+    font-weight: normal;
+
+    position: absolute;
+    top: 643px;
+    left: 342px;
+}
+
+#page-three-text-bottom #adjust{
+    margin-left:5px;
+}
+
+#next-three{
+    width: 68px;
+    height: 80px;
+    background-image: url(../images/arrow.png);
+    background-size: 68px 80px;
+
+    position: absolute;
+    top: 436px;
+    left: 1608px;
+}
+
+/* END PAGE 3 */
+/* BEGIN PAGE 4 */
+
+#page-four-title{
+    width: 811px;
+    height: 172px;
+    background-image: url(../images/page-four-title.png);
+
+    position: absolute;
+    left: 560px;
+    top: 0px;
+}
+
+.center-div #page-four-chart{
+    width: 1402px;
+    height: 738px;
+    background-image: url(../images/page-four-chart.png);
+    background-size: 1402px 738px;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 67px;
+    left: 78px;
+}
+
+.center-div #page-four-chart #col-us {
+    left: 292px;
+}
+
+.center-div #page-four-chart #col-uk {
+    left: 428px;
+}
+
+.center-div #page-four-chart #col-germany {
+    left: 563px;
+}
+
+.center-div #page-four-chart #col-canada {
+    left: 698px;
+}
+
+.center-div #page-four-chart #col-brazil {
+    left: 834px;
+}
+
+.center-div #page-four-chart #col-france {
+    left: 969px;
+}
+
+.center-div #page-four-chart #col-italy {
+    left: 1104px;
+}
+
+.center-div #page-four-chart #col-spain {
+    left: 1239px;
+}
+
+/* END PAGE 4 */
+/* BEGIN PAGE 5 */
+
+ #page-five-text-top{
+    width: 1919px;
+    height: 680px;
+
+    font-family: "Ropa Sans";
+    font-size: 90px;
+    color: #f3f3f3;
+    line-height: 89px;
+    letter-spacing: 0px;
+    font-weight: normal;
+
+    position: absolute;
+    top: 193px;
+    left: 234px;
+}
+
+ #page-five-text-top #page-five-lh{
+    font-size: 35px;
+    position: absolute;
+    top: 411px;
+    left: 1475px;
+}
+
+ #page-five-text-bottom{
+    width: 1929px;
+    height: 277px;
+
+    font-family: "Open Sans";
+    font-size: 21px;
+    color: #a29297;
+    line-height: 28px;
+    letter-spacing: 0px;
+    font-weight: lighter;
+
+    position: absolute;
+    top: 755px;
+    left: 234px;
+}
+
+#next-five{
+    width: 68px;
+    height: 80px;
+    background-image: url(../images/arrow.png);
+    background-size: 68px 80px;
+
+    position: absolute;
+    top: 411px;
+    left: 1769px;
+}
+
+/* END PAGE 5 */
+/* BEGIN PAGE 6 */
+
+ #page-six-title{
+    width: 811px;
+    height: 172px;
+    background-image: url(../images/page-six-title.png);
+
+    position: absolute;
+    left: 560px;
+    top: 0px;
+}
+
+ .center-div #page-six-chart{
+    width: 1402px;
+    height: 738px;
+    background-image: url(../images/page-six-chart.png);
+    background-size: 1402px 738px;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 67px;
+    left: 78px;
+}
+
+ .center-div #page-six-chart #col-F {
+    left: 620px;
+}
+
+ .center-div #page-six-chart #col-M {
+    left: 848px;
+}
+
+/* END PAGE 6 */
+/* BEGIN PAGE 7 */
+
+ #page-seven-text-top{
+    width: 1765px;
+    height: 450px;
+
+    font-family: "Ropa Sans";
+    font-size: 90px;
+    color: #f3f3f3;
+    line-height: 89px;
+    letter-spacing: 0px;
+    font-weight: normal;
+
+    position: absolute;
+    top: 333px;
+    left: 283px;
+}
+
+ #page-seven-text-top #page-seven-lh{
+    font-size: 35px;
+    position: absolute;
+    top: 235px;
+    left: 1252px;
+}
+
+ #page-seven-text-bottom{
+    width: 1457px;
+    height: 283px;
+
+    font-family: "Open Sans";
+    font-size: 21px;
+    color: #a29297;
+    line-height: 29px;
+    letter-spacing: 0px;
+    font-weight: lighter;
+
+    position: absolute;
+    top: 793px;
+    left: 283px;
+}
+
+#next-seven{
+    width: 68px;
+    height: 80px;
+    float: right;
+    background-image: url(../images/arrow.png);
+    background-size: 68px 80px;
+
+    position: absolute;
+    top: 470px;
+    left: 1702px;
+}
+
+/* END PAGE 7 */
+/* BEGIN PAGE 8 */
+
+ #page-eight-title{
+    width: 811px;
+    height: 172px;
+    background-image: url(../images/page-eight-title.png);
+
+    position: absolute;
+    left: 560px;
+    top: 0px;
+}
+
+ .center-div #page-eight-chart{
+    width: 1402px;
+    height: 738px;
+    background-image: url(../images/page-eight-chart.png);
+    background-size: 1402px 738px;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 67px;
+    left: 78px;
+}
+
+ .center-div #page-eight-chart #col-2 {
+    left: 355px;
+}
+
+ .center-div #page-eight-chart #col-3 {
+    left: 515px;
+}
+
+ .center-div #page-eight-chart #col-4 {
+    left: 673px;
+}
+
+ .center-div #page-eight-chart #col-5 {
+    left: 831px;
+}
+
+ .center-div #page-eight-chart #col-6 {
+    left: 991px;
+}
+
+ .center-div #page-eight-chart #col-7 {
+    left: 1149px;
+}
+
+/* END PAGE 8 */
+

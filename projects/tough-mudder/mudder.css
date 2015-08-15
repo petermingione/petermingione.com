@@ -1,0 +1,199 @@
+html, body{ 
+	margin:0; 
+	padding:0; 
+	font-size:100%;
+}
+body{ 
+	background-color:#cccccc;
+	font-family: Helvetica, Geneva, Arial, sans-serif;	
+	color:white;
+	font-size:1em;			
+}
+div#content_centered{
+	width:810px;
+	height:925px;
+	margin-right:auto;
+	margin-left:auto;
+	background-image:url('background.jpg');
+	background-color:#000000;
+}
+div#top{
+	padding-right:335px;
+	padding-left:20px;	
+	padding-top:125px;
+}
+div#middle{
+	width:770px;
+	padding-right:20px;
+	padding-left:20px;
+	
+}
+div#middle_left{
+	float:left;
+	font-size:.85em;
+	width:272px;		
+}
+.red_text{	
+	color:#ff6700;	
+}
+p.grey_text{
+	color:#c0c0c0;	
+}
+div#season_pass{
+	width:272px;
+	height:139px;
+	background-image:url('season_pass.png');
+	
+	position:relative;
+	top:15px;
+	
+	-moz-animation: rotation1 60s linear infinite;
+  	-o-animation: rotation1 60s linear infinite;
+  	-webkit-animation: rotation1 60s linear infinite;
+  	animation: rotation1 60s linear infinite;
+}
+@-webkit-keyframes rotation1{
+	from{
+		-webkit-transform:rotate(0deg);
+		-moz-transform:rotate(0deg);
+		-ms-transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+		transform:rotate(0deg)
+	}
+	to{
+		-webkit-transform:rotate(360deg);
+		-moz-transform:rotate(360deg);
+		-ms-transform:rotate(360deg);
+		-o-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
+}
+@-moz-keyframes rotation1{
+	from{
+		-webkit-transform:rotate(0deg);
+		-moz-transform:rotate(0deg);
+		-ms-transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+		transform:rotate(0deg)}
+	to{
+		-webkit-transform:rotate(360deg);
+		-moz-transform:rotate(360deg);
+		-ms-transform:rotate(360deg);
+		-o-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
+}
+@-o-keyframes rotation1{
+	from{
+		-webkit-transform:rotate(0deg);
+		-moz-transform:rotate(0deg);
+		-ms-transform:rotate(0deg);
+		-o-transform:rotate(0deg);
+		transform:rotate(0deg)
+	}
+	to{
+		-webkit-transform:rotate(360deg);
+		-moz-transform:rotate(360deg);
+		-ms-transform:rotate(360deg);
+		-o-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
+}
+div#middle_right{
+	width:420px;
+	height:487px;
+	background-color:#464646;
+	background-image: url('dude.png') , url('form_text.png');
+	background-size:45% , 100%;
+	background-repeat:no-repeat;
+	background-position: left 0px top 20px , left 0px top 0px;
+	margin-top:20px;
+	margin-left:298px;
+	padding:12px;
+	border-radius:  25px;
+	border-width:5px;
+	border-style:double;
+	border-color:grey;
+	font-size: .95em;
+}
+div#submit{
+	width:195px;
+	height:108px;
+	background-image:url('submit.png');
+	position:relative;
+	top:-25px;
+	left:580px;
+}
+div.float_right{
+	float:right;
+}
+input[type="text"], textarea{
+	background-color:#000000; 
+	border-width:1px;
+	border-style:solid;
+	border-color:#c0c0c0;
+	border-radius:5px;
+	color:#ff6700;	
+}
+textarea{
+	height:110px;
+	width:260px;
+}
+input[type="text"]{
+	height:32px;
+	width:260px;
+}
+span.resize{
+	font-size: .7em;		
+}
+label{
+	font-weight: bold; 
+}
+label#area_label{
+	position:relative;
+	top:20px;
+}
+div#required{
+	width:110px;
+	position:relative;
+	top:450px;
+	left:5px;
+	font-size:.70em;
+}
+div.inputs{
+	padding-bottom:12px;
+}
+div.city_input{
+	padding-bottom:40px;
+}
+div#state{
+	position:relative;
+	top:235px;
+	left:155px;
+}
+div.zip{
+	padding-bottom:10px;
+}
+::-webkit-input-placeholder { 
+	/* WebKit browsers */
+	color:#ff6700;
+	font-style:italic;
+}
+:-moz-placeholder { 
+	/* Mozilla Firefox 4 to 18 */
+	color:#ff6700;
+	font-style:italic;
+}
+::-moz-placeholder { 
+	/* Mozilla Firefox 19+ */
+	color:#ff6700;
+	font-style:italic;
+}
+:-ms-input-placeholder { 
+	/* Internet Explorer 10+ */
+	color:#ff6700;
+	font-style:italic;
+}
+.spacing{
+	letter-spacing:1px;
+}

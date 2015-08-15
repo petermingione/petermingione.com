@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Links to external jQuery -->
+        <!--
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        -->
+
+        <!-- Links to internal jQuery -->
+        <script src="assets/scripts/jquery-1.11.2.min.js"></script>
+        <script src="assets/scripts/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="assets/css/jquery.mobile-1.4.5.min.css">
+
+        <!-- Link to external Google fonts -->
+        <!-- <link href='http://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300italic,700,300' rel='stylesheet' type='text/css'> -->
+
+        <!-- Link to internal Google fonts -->
+        <link href='assets/css/google-styles.css' rel='stylesheet' type='text/css'>
+
+        <!-- Internal assests --> 
+        <script src="assets/scripts/panel-script.js"></script>
+        <link rel="stylesheet" href="assets/css/stylesheet.css">
+
+    </head>
+
+<body>
+
+    <div class="container">
+
+        <video autoplay loop poster="assets/images/input-bg.jpg" id="bg-video">
+            <!-- <source src="assets/videos/bg.webm" type="video/webm"> -->
+            <source src="assets/videos/bg.mp4" type="video/mp4">
+        </video>
+
+        <div class="home-button" id="home">
+            <img src="assets/images/home-button.png" height="60" width="60">
+        </div>
+
+        <div class="skip-button" id="skip">
+            <img src="assets/images/skip-button.png" height="60" width="60">
+        </div>
+
+        <div id="back-next-global">
+            <div class="back-black" id="back-black-global" ></div>
+            <div class="next-grey" id="next-grey-global"  ></div>
+            <div class="next-black" id="next-black-global" ></div>
+        </div>
+                     
+        <div class="white-center">
+
+            <div id="tracker">
+                <div id="tracker-red" ></div>
+                <div id="tracker-black"  ></div>
+                <div id="tracker-grey" ></div>
+                <div id="tracker-mask" ></div>
+                <div id="red-circle" ></div>
+            </div>
+
+            <!-- page one -->
+            <div data-role="page" id="page-1">
+                <div data-role="main" class="ui-content">
+                    <div class="center-div">
+                        <div id="welcome">WELCOME</div>
+
+                        <div id="enter">
+                            Enter your serum uric acid (sUA) level and see how it compares<br /> 
+                            to that of other congress attendees. Check the output monitor<br />
+                            to see sUA levels organized by age, gender, country, and date.
+                        </div>
+
+                        <div id="checkbox-unchecked"></div>
+
+                        <div id="checkbox-checked"></div>
+                        
+                        <div id="tested">
+                            I have tested my sUA levels using the HumaSens home monitoring device at EULAR<br />
+                            2015 in Rome, and I approve that my sUA value, age group, gender, country of origin,<br />
+                            and the day I took the test may be displayed on the main screen in the booth.
+                        </div>
+                    
+                        <div id="begin-grey"></div>
+
+                        <div id="begin-black"></div>
+
+                    </div>   
+                </div>
+            </div> 
+
+            <!-- page two -->
+            <div data-role="page" id="page-2">
+                <div data-role="main" class="ui-content" style="border-color: transparent;">
+                    <div class="center-div">
+
+                        <div id="my-country">MY COUNTRY OF ORIGIN IS</div>
+
+                        <!--
+                        <div id="select-country">
+                            <select id="country" data-role="none">
+                                <option value="" selected>SELECT COUNTRY</option>
+                                <option value="brazil">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brazil</option>
+                                <option value="canada">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Canada</option>
+                                <option value="france">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;France</option>
+                                <option value="germany">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Germany</option>
+                                <option value="italy">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Italy</option>
+                                <option value="spain">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spain</option>
+                                <option value="uk">&nbsp;United Kingdom</option>
+                                <option value="us">&nbsp;&nbsp;United States</option>
+                            </select>
+                        </div>
+                        -->
+
+                        <div id="select-country">
+                            <select id="country" data-role="none">
+                                <option value="" selected>&nbsp;&nbsp;&nbsp;&nbsp;SELECT COUNTRY</option>
+                                <option value="afghanistan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afghanistan</option>
+                                <option value="albania">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Albania</option>
+                                <option value="algeria">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Algeria</option>
+                                <option value="american_samoa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;American Samoa</option>
+                                <option value="andorra">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Andorra</option>
+                                <option value="angola">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Angola</option>
+                                <option value="anguilla">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anguilla</option>
+                                <option value="antigua_and_barbuda">&nbsp;&nbsp;Antigua And Barbuda</option>
+                                <option value="argentina">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Argentina</option>
+                                <option value="armenia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Armenia</option>
+                                <option value="aruba">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aruba</option>
+                                <option value="australia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Australia</option>
+                                <option value="austria">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Austria</option>
+                                <option value="azerbaijan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Azerbaijan</option>
+                                <option value="bahamas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bahamas</option>
+                                <option value="bahrain">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bahrain</option>
+                                <option value="bangladesh">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bangladesh</option>
+                                <option value="barbados">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Barbados</option>
+                                <option value="belarus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Belarus</option>
+                                <option value="belgium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Belgium</option>
+                                <option value="belize">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Belize</option>
+                                <option value="benin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Benin</option>
+                                <option value="bermuda">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bermuda</option>
+                                <option value="bhutan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bhutan</option>
+                                <option value="bolivia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bolivia</option>
+                                <option value="bosnia_and_herzegovina">Bosnia And Herzegovina</option>
+                                <option value="botswana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Botswana</option>
+                                <option value="brazil">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brazil</option>
+                                <option value="brunei_darussalam">&nbsp;&nbsp;&nbsp;&nbsp;Brunei Darussalam</option>
+                                <option value="bulgaria">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bulgaria</option>
+                                <option value="burundi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Burundi</option>
+                                <option value="cambodia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cambodia</option>
+                                <option value="cameroon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cameroon</option>
+                                <option value="canada">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Canada</option>
+                                <option value="cape_verde">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cape Verde</option>
+                                <option value="cayman_islands">&nbsp;&nbsp;&nbsp;&nbsp;Cayman Islands</option>
+                                <option value="central_african_republic">Central African Republic</option>
+                                <option value="chad">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chad</option>
+                                <option value="chile">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chile</option>
+                                <option value="china">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;China</option>
+                                <option value="colombia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Colombia</option>
+                                <option value="Comoros">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comoros</option>
+                                <option value="congo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Congo</option>
+                                <option value="costa_rica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Costa Rica</option>
+                                <option value="cote_ivoire">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cote D'Ivoire</option>
+                                <option value="croatia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Croatia</option>
+                                <option value="cuba">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cuba</option>
+                                <option value="cyprus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cyprus</option>
+                                <option value="czech_republic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Czech Republic</option>
+                                <option value="denmark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denmark</option>
+                                <option value="djibouti">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Djibouti</option>
+                                <option value="dominica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dominica</option>
+                                <option value="dominican_republic">&nbsp;&nbsp;&nbsp;Dominican Republic</option>
+                                <option value="east_timor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;East Timor</option>
+                                <option value="ecuador">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ecuador</option>
+                                <option value="egypt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Egypt</option>
+                                <option value="el_salvador">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;El Salvador</option>
+                                <option value="Eeuatorial_guinea">&nbsp;&nbsp;&nbsp;&nbsp;Equatorial Guinea</option>
+                                <option value="eritrea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eritrea</option>
+                                <option value="estonia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estonia</option>
+                                <option value="ethiopia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ethiopia</option>
+                                <option value="fiji">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fiji</option>
+                                <option value="finland">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finland</option>
+                                <option value="france">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;France</option>
+                                <option value="french_guiana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;French Guiana</option>
+                                <option value="french_polynesia">&nbsp;&nbsp;&nbsp;&nbsp;French Polynesia</option>
+                                <option value="gabon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gabon</option>
+                                <option value="gambia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gambia</option>
+                                <option value="georgia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Georgia</option>
+                                <option value="germany">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Germany</option>
+                                <option value="ghana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ghana</option>
+                                <option value="gibraltar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gibraltar</option>
+                                <option value="greece">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Greece</option>
+                                <option value="greenland">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Greenland</option>
+                                <option value="grenada">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grenada</option>
+                                <option value="guadeloupe">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Guadeloupe</option>
+                                <option value="guam">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Guam</option>
+                                <option value="guatemala">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Guatemala</option>
+                                <option value="guinea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Guinea</option>
+                                <option value="guyana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Guyana</option>
+                                <option value="haiti">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Haiti</option>
+                                <option value="honduras">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Honduras</option>
+                                <option value="hong_kong">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hong Kong</option>
+                                <option value="hungary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hungary</option>
+                                <option value="iceland">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iceland</option>
+                                <option value="india">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;India</option>
+                                <option value="indonesia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indonesia</option>
+                                <option value="iran">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iran</option>
+                                <option value="iraq">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iraq</option>
+                                <option value="ireland">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ireland</option>
+                                <option value="israel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Israel</option>
+                                <option value="italy">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Italy</option>
+                                <option value="jamaica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jamaica</option>
+                                <option value="japan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Japan</option>
+                                <option value="jordan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jordan</option>
+                                <option value="kazakhstan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kazakhstan</option>
+                                <option value="kenya">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kenya</option>
+                                <option value="kiribati">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kiribati</option>
+                                <option value="north_korea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;North Korea</option>
+                                <option value="south_korea">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;South Korea</option>
+                                <option value="kuwait">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kuwait</option>
+                                <option value="kyrgyzstan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kyrgyzstan</option>
+                                <option value="laos">&nbsp;&nbsp;Lao People's Republic</option>
+                                <option value="latvia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Latvia</option>
+                                <option value="lebanon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lebanon</option>
+                                <option value="lesotho">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lesotho</option>
+                                <option value="liberia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liberia</option>
+                                <option value="lybia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lybia</option>
+                                <option value="liechtenstein">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liechtenstein</option>
+                                <option value="lithuania">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lithuania</option>
+                                <option value="luxembourg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luxembourg</option>
+                                <option value="macau">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Macau</option>
+                                <option value="macedonia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Macedonia</option>
+                                <option value="madagascar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Madagascar</option>
+                                <option value="malawi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Malawi</option>
+                                <option value="malaysia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Malaysia</option>
+                                <option value="maldives">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maldives</option>
+                                <option value="mali">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mali</option>
+                                <option value="malta">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Malta</option>
+                                <option value="martinique">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Martinique</option>
+                                <option value="mauritania">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mauritania</option>
+                                <option value="mauritius">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mauritius</option>
+                                <option value="mexico">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mexico</option>
+                                <option value="micronesia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Micronesia</option>
+                                <option value="moldova">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moldova</option>
+                                <option value="monaco">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monaco</option>
+                                <option value="mongolia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mongolia</option>
+                                <option value="montserrat">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Montserrat</option>
+                                <option value="morocco">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Morocco</option>
+                                <option value="mozambique">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mozambique</option>
+                                <option value="myanmar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Myanmar</option>
+                                <option value="mamibia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Namibia</option>
+                                <option value="mauru">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nauru</option>
+                                <option value="nepal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nepal</option>
+                                <option value="netherlands">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Netherlands</option>
+                                <option value="new_caledonia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Caledonia</option>
+                                <option value="new_zealand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Zealand</option>
+                                <option value="nicaragua">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nicaragua</option>
+                                <option value="niger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Niger</option>
+                                <option value="nigeria">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nigeria</option>
+                                <option value="norway">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Norway</option>
+                                <option value="oman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oman</option>
+                                <option value="pakistan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pakistan</option>
+                                <option value="panama">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Panama</option>
+                                <option value="papua_new_guinea">&nbsp;&nbsp;&nbsp;&nbsp;Papua New Guinea</option>
+                                <option value="paraguay">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paraguay</option>
+                                <option value="peru">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Peru</option>
+                                <option value="philippines">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Philippines</option>
+                                <option value="poland">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poland</option>
+                                <option value="portugal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Portugal</option>
+                                <option value="puerto_rico">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Puerto Rico</option>
+                                <option value="qatar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qatar</option>
+                                <option value="romania">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Romania</option>
+                                <option value="russia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Russia</option>
+                                <option value="rwanda">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rwanda</option>
+                                <option value="saint_lucia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saint Lucia</option>
+                                <option value="samoa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Samoa</option>
+                                <option value="san_marino">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;San Marino</option>
+                                <option value="saudi_arabia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saudi Arabia</option>
+                                <option value="senegal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senegal</option>
+                                <option value="seychelles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seychelles</option>
+                                <option value="sierra_leone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sierra Leone</option>
+                                <option value="singapore">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Singapore</option>
+                                <option value="slovakia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slovakia</option>
+                                <option value="slovenia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slovenia</option>
+                                <option value="solomon_islands">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solomon Islands</option>
+                                <option value="somalia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Somalia</option>
+                                <option value="south_africa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;South Africa</option>
+                                <option value="spain">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spain</option>
+                                <option value="sri_lanka">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sri Lanka</option>
+                                <option value="sudan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sudan</option>
+                                <option value="suriname">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Suriname</option>
+                                <option value="swaziland">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Swaziland</option>
+                                <option value="sweden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sweden</option>
+                                <option value="switzerland">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Switzerland</option>
+                                <option value="syria">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Syria</option>
+                                <option value="taiwan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taiwan</option>
+                                <option value="tajikistan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tajikistan</option>
+                                <option value="tanzania">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tanzania</option>
+                                <option value="thailand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thailand</option>
+                                <option value="togo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Togo</option>
+                                <option value="trinidad_and_tobago">&nbsp;&nbsp;Trinidad And Tobago</option>
+                                <option value="tunisia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tunisia</option>
+                                <option value="turkey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Turkey</option>
+                                <option value="turkmenistan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Turkmenistan</option>
+                                <option value="tuvalu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tuvalu</option>
+                                <option value="uganda">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uganda</option>
+                                <option value="ukraine">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ukraine</option>
+                                <option value="united_arab_emirates">&nbsp;&nbsp;&nbsp;United Arab Emirates</option>
+                                <option value="uk">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;United Kingdom</option>
+                                <option value="us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;United States</option>
+                                <option value="uruguay">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uruguay</option>
+                                <option value="uzbekistan">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uzbekistan</option>
+                                <option value="vanuatu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vanuatu</option>
+                                <option value="vatican_city_state">&nbsp;&nbsp;&nbsp;&nbsp;Vatican City State</option>
+                                <option value="venezuela">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venezuela</option>
+                                <option value="vietnam">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vietnam</option>
+                                <option value="virgin_islands_british">&nbsp;&nbsp;Virgin Islands (British)</option>
+                                <option value="virgin_islands_us">&nbsp;&nbsp;&nbsp;Virgin Islands (U.S.)</option>
+                                <option value="western_sahara">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Western Sahara</option>
+                                <option value="yemen">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yemen</option>
+                                <option value="zaire">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zaire</option>
+                                <option value="zambia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zambia</option>
+                                <option value="zimbabwe">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zimbabwe</option>
+                                <option value="other">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other</option>
+                            </select>
+                        </div>
+                
+                        <a href="#page-1" data-transition="slide" data-direction="reverse">
+                            <div class="home-button">
+                                <!-- <img src="assets/images/home-button.png" height="60" width="60"> -->
+                            </div>
+                        </a>  
+
+                        <div class="back-next">
+
+                            <a href="#page-1" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                                <div class="back-black" id="back-black-2"></div>
+                            </a>
+
+                            <div class="next-grey" id="next-grey-2"></div>
+
+                            <a href="#page-3" data-transition="slide" style="text-decoration: none;">
+                                <div class="next-black" id="next-black-2"></div>
+                            </a>
+
+                        </div>
+
+                        <a href="#page-3" data-transition="slide">
+                            <div class="skip-button">
+                               <!--  <img src="assets/images/skip-button.png" height="60" width="60"> -->
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+               
+            <!-- page three -->
+            <div data-role="page" id="page-3">
+                <div data-role="main" class="ui-content">
+                    <div class="center-div">
+
+                        <div id="male-female">
+
+                            <div id="male"></div>
+                            <div id="male-red"></div>
+
+                            <div id="gender"></div>
+
+                            <div id="female"></div>
+                            <div id="female-red"></div>
+
+                        </div>
+
+                         <div class="back-next">
+                            <a href="#page-2" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                                <div class="back-black" id="back-black-3"></div>
+                            </a>
+
+                            <div class="next-grey" id="next-grey-3"></div>
+
+                            <a href="#page-4" data-transition="slide" style="text-decoration: none;">
+                                <div class="next-black" id="next-black-3"></div>
+                            </a>
+                        </div>
+
+                        <a href="#page-4" data-transition="slide">
+                            <div class="skip-button">
+                                <!-- <img src="assets/images/skip-button.png" height="60" width="60"> -->
+                            </div>
+                        </a>
+
+                        <a href="#page-1" data-transition="slide" data-direction="reverse">
+                            <div class="home-button">
+                                <!-- <img src="assets/images/home-button.png" height="60" width="60"> -->
+                            </div>
+                        </a>
+
+                    </div>
+                </div>      
+            </div> 
+
+            <!-- page four -->
+            <div data-role="page" id="page-4">
+                <div data-role="main" class="ui-content">
+                    <div class="center-div">
+
+                        <div id="my-age">MY AGE GROUP IS</div>
+
+                        <div id="select-age">
+                            <select id="age" data-role="none">
+                                <option value="">SELECT</option>
+                                <option value="2">20 - 29</option>
+                                <option value="3">30 - 39</option>
+                                <option value="4">40 - 49</option>
+                                <option value="5">50 - 59</option>
+                                <option value="6">60 - 69</option>
+                                <option value="7">&nbsp;&nbsp;70 +</option>
+                            </select>
+                        </div>
+                
+                        <a href="#page-1" data-transition="slide" data-direction="reverse">
+                            <div class="home-button">
+                                <!-- <img src="assets/images/home-button.png" height="60" width="60"> -->
+                            </div>
+                        </a>  
+
+                        <div class="back-next">
+
+                            <a href="#page-3" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                                <div class="back-black" id="back-black-4"></div>
+                            </a>
+
+                            <div class="next-grey" id="next-grey-4"></div>
+
+                            <a href="#page-5" data-transition="slide" style="text-decoration: none;">
+                                <div class="next-black" id="next-black-4"></div>
+                            </a>
+
+                        </div>
+
+                        <a href="#page-5" data-transition="slide">
+                            <div class="skip-button">
+                                <!-- <img src="assets/images/skip-button.png" height="60" width="60"> -->
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- page five -->
+            <div data-role="page" id="page-5">
+                <div data-role="main" class="ui-content">
+                    <div class="center-div">
+
+                        <div id="input-container">
+
+                            <div id="drop"></div>
+                            <div id="drop-red"></div>
+
+                            <div id="my-sua-top"> MY SERUM URIC ACID </div>
+                            <div id="my-sua-bottom">LEVEL IS  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mg/dL</div> 
+
+                            <div id="input-wrapper">
+                                <input value="" type="text" maxlength="4" id="sua" data-role="none">
+                            </div>
+
+                        </div>
+
+                        <div id="validation-text">
+                            The number that you entered is not in the correct format.<br />
+                            Please check the device again, and re-enter the number exactly as it appears.
+                        </div>
+
+                        <a href="#page-1" data-transition="slide" data-direction="reverse">
+                            <div class="home-button">
+                                <!-- <img src="assets/images/home-button.png" height="60" width="60"> -->
+                            </div>
+                        </a>  
+
+                        <div class="back-next">
+
+                            <a href="#page-4" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                                <div class="back-black" id="back-black-5"></div>
+                            </a>
+
+                            <div class="next-grey" id="next-grey-5"></div>
+
+                            <a href="#page-6" data-transition="slide" style="text-decoration: none;">
+                                <div class="next-black" id="next-black-5" ></div>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+             </div>
+
+            <!-- page six -->
+            <div data-role="page" id="page-6">
+                <div data-role="main" class="ui-content">
+                    <div class="center-div">
+
+                        <a href="#page-1" data-transition="slide" data-direction="reverse">
+                            <div class="home-button">
+                                <!-- <img src="assets/images/home-button.png" height="60" width="60"> -->
+                            </div>
+                        </a>
+
+                        <div id="thank-you">THANK YOU</div>
+
+                        <div id="red-line"></div>
+
+                        <div id="thank-you-text">
+                            Did you know that EULAR guidelines recommend maintaining<br />
+                            serum uric acid (sUA) levels below 360 &#956;mol/L (<6 mg/dL)?<br /> 
+                            In fact, for patients with extensive tophi and a presumed high<br />
+                            crystal load, the therapeutic target may be well below this point to<br /> 
+                            permit faster tophi reduction. Find out more inside this booth.<sup>1-5</sup><br />
+                            <br />
+                            Check the display screen to see how your sUA level compares to<br />
+                            that of other EULAR 2015 attendees!  
+                        </div>
+                        
+                        <a href="#page-5" data-transition="slide" style="text-decoration: none;" data-direction="reverse">
+                            <div class="back-black" id="back-black-6"></div>
+                        </a>
+
+                        <div class="back-grey" id="back-grey-6"></div>
+                        
+
+                        <div id="submit-button"></div>
+                   
+
+                        <div id="footer-text">
+                            <b>References: 1.</b> Zhang W, Doherty M, Bardin T, et al. EULAR evidence based recommendations for gout. Part II: management. Report of a task force of the EULAR Standing Committee for International Clinical<br /> 
+
+                            Studies Including Therapeutics (ESCISIT). <i>Ann Rheum Dis.</i> 2006;65(10):1312-1324. <b>2.</b> Richette P, Doherty M, Pascual E, et al. Updated EULAR evidence-based recommendations for the management of gout. <i>Ann Rheum</i><br />
+
+                            <i>Dis.</i> 2014;73(suppl 2):S783-S784. <b>3.</b> Khanna D, Fitzgerald JD, Khanna PP, et al. 2012 American College of Rheumatology guidelines for management of gout. Part 1: systematic nonpharmacologic and pharmacologic<br />
+
+                            therapeutic approaches to hyperuricemia. <i>Arthritis Care Res</i> (Hoboken). 2012;64(10):1431-1446. <b>4.</b> Sivera F, Andres M, Carmona L, et al. Multinational evidence-based recommendations for the diagnosis and<br />
+
+                            management of gout: integrating systematic literature review and expert opinion of a broad panel of rheumatologists in the 3e initiative. <i>Ann Rheum Dis.</i> 2014;73(2):328-335. <b>5.</b> Jordan KM, Cameron JS, Snaith M,<br />
+
+                            et al. British Society for Rheumatology and British Health Professionals in Rheumatology guideline for the management of gout. <i>Rheumatology</i> (Oxford). 2007;46(8):1372-1374.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> <!-- END WHITE CENTER -->
+
+        <div class="foot">
+            <div class="foot-text">March 2015 - Atlas ID: 716.909,011 - Expiry date 13 June 2015</div>
+            <div class="az-logo"></div>
+        </div>
+        
+    </div> <!-- CONTAINER -->
+
+</body>
+</html>

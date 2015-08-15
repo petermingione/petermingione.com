@@ -1,0 +1,184 @@
+/* Peter Mingione March 11, 2015 */
+
+html, body{ 
+	margin:0; 
+	padding:0; 
+}
+body{}
+
+#container{
+	width:1200px;
+	height:300px;
+	margin: 20px auto 0 auto;
+	border: 1px solid black;
+	overflow: hidden;
+	cursor: pointer;
+	cursor: hand;	
+}
+
+#container #sky{
+	width:1200px;
+	height:300px;
+	overflow: hidden;
+	position: relative;
+	top:0;
+}
+
+#container #sky #sky-image{
+	width:2000px;
+	height:279px;
+	position: relative;
+	left:-800px;
+}
+
+#container #background{
+	width:1200px;
+	height:300px;
+	background-image: url("../images/bg.png");
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	position: relative;
+	top:-300px;
+}
+
+#container #unneccessary{
+	width:305px;
+	height:89px;
+	background-image: url("../images/unneccessary.png");
+	background-repeat: no-repeat;
+	position: relative;
+	top:-560px;
+	left:680px;
+}
+
+#container #old-spice{
+	width:0;
+	height:33px;
+	background-image: url("../images/old-spice.png");
+	background-repeat: no-repeat;
+	position: relative;
+	top:-560px;
+	left:782px;
+}
+
+#container #palm-trees{
+	width:651px;
+	height:296px;
+	background-image: url("../images/palm-trees.png");
+	position: relative;
+	top:-723px;
+	left:-46px;
+}
+
+#container #overlay{
+	width:1200px;
+	height:300px;
+	background-color: rgba(0, 0, 0, 0.75);
+	position: relative;
+	top:-1018px;
+}
+
+#container #tv-container{
+	width:380px;
+	height:188px;
+	position: relative;
+	top:-1195px;
+	left:88px;
+	overflow: hidden;
+}
+
+#container #tv-container #player{
+	width:293px;
+	height:180px;
+	position: relative;
+	top:3px;
+	left:42px;
+}
+
+#container #tv-container #tv-lid{
+	width:253px;
+	height:146px;
+	background-image: url("../images/tv-lid.png");
+	position: relative;
+	top:-168px;
+	left:48px;
+}
+
+#container #tv-container #tv-frame{
+	width:380px;
+	height:188px;
+	background-image: url("../images/tv-frame.png");
+	position: relative;
+	top:-340px;
+	left:0px;
+}
+
+#container #click-here-sign{
+	width:142px;
+	height:240px;
+	background-image: url("../images/click-here-sign.png");
+	background-repeat: no-repeat;
+	position: relative;
+	top:-1208px;
+	left:872px;
+	-webkit-transform:rotate(-3deg);
+	-moz-transform:rotate(-3deg);
+	-ms-transform:rotate(-3deg);
+	-o-transform:rotate(-3deg);
+	transform:rotate(-3deg);
+}
+
+#container #click-here-sign:hover{	
+	-moz-animation: rotation1 .5s linear 3 alternate;
+  	-o-animation: rotation1 .5s linear 3 alternate;
+  	-webkit-animation: rotation1 .5s linear 3 alternate;
+  	animation: rotation1 .5s linear 3 alternate;
+}
+
+@-webkit-keyframes rotation1{
+	from{
+		-webkit-transform:rotate(3deg);
+		-moz-transform:rotate(3deg);
+		-ms-transform:rotate(3deg);
+		-o-transform:rotate(3deg);
+		transform:rotate(3deg)
+	}
+	to{
+		-webkit-transform:rotate(-3deg);
+		-moz-transform:rotate(-3deg);
+		-ms-transform:rotate(-3deg);
+		-o-transform:rotate(-3deg);
+		transform:rotate(-3deg)
+	}
+}
+@-moz-keyframes rotation1{
+	from{
+		-webkit-transform:rotate(3deg);
+		-moz-transform:rotate(3deg);
+		-ms-transform:rotate(3deg);
+		-o-transform:rotate(3deg);
+		transform:rotate(3deg)}
+	to{
+		-webkit-transform:rotate-3deg);
+		-moz-transform:rotate(-3deg);
+		-ms-transform:rotate(-3deg);
+		-o-transform:rotate(-3deg);
+		transform:rotate(-3deg)
+	}
+}
+@-o-keyframes rotation1{
+	from{
+		-webkit-transform:rotate(3deg);
+		-moz-transform:rotate(3deg);
+		-ms-transform:rotate(3deg);
+		-o-transform:rotate(3deg);
+		transform:rotate(3deg)
+	}
+	to{
+		-webkit-transform:rotate(-3deg);
+		-moz-transform:rotate(-3deg);
+		-ms-transform:rotate(-3deg);
+		-o-transform:rotate(-3deg);
+		transform:rotate(-3deg)
+	}
+}
